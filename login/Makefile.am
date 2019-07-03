@@ -2,7 +2,7 @@
 
 libdir = @plugindir@
 
-AM_CPPFLAGS = -I@srcdir@
+AM_CPPFLAGS = -I@srcdir@ -I@srcdir@/../login -I@builddir@/../login
 
 lib_LTLIBRARIES = sasl-login.la
 AM_CFLAGS = @CFLAGS@ @EXTRA_CFLAGS@
