@@ -196,7 +196,7 @@ starttls_create_ctx (smtp_session_t session)
   char *keyfile, *cafile, *capath;
   ckf_t status;
 
-  ctx = SSL_CTX_new (TLSv1_2_method ());
+  ctx = SSL_CTX_new ( TLS_client_method ());
 
   /* Load our keys and certificates.  To avoid messing with configuration
      variables etc, use fixed paths for the certificate store.  These are

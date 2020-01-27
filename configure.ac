@@ -24,7 +24,7 @@ dnl Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 dnl 
 dnl #########################################################################
 
-AC_INIT([libesmtp], [1.2.0])
+AC_INIT([libesmtp], [1.3.0])
 AC_CONFIG_SRCDIR([smtp-api.c])
 AM_INIT_AUTOMAKE
 AC_CANONICAL_HOST
@@ -35,7 +35,7 @@ dnl Library versioning
 dnl #########################################################################
 
 LIB_CURRENT=7
-LIB_REVISION=6
+LIB_REVISION=7
 LIB_AGE=1
 AC_SUBST(LIB_CURRENT)
 AC_SUBST(LIB_REVISION)
