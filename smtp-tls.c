@@ -196,12 +196,7 @@ starttls_create_ctx (smtp_session_t session)
   char *keyfile, *cafile, *capath;
   ckf_t status;
 
-  /* The decision not to support SSL v2 and v3 but instead to use only
-     TLSv1 is deliberate.  This is in line with the intentions of RFC
-     3207.  Servers typically support SSL as well as TLS because some
-     versions of Netscape do not support TLS.  I am assuming that all
-     currently deployed servers correctly support TLS.  */
-  ctx = SSL_CTX_new (TLSv1_client_method ());
+  ctx = SSL_CTX_new ( TLS_client_method ());
 
   /* Load our keys and certificates.  To avoid messing with configuration
      variables etc, use fixed paths for the certificate store.  These are

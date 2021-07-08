@@ -2,7 +2,7 @@
 
 libdir = @plugindir@
 
-INCLUDES = -I@srcdir@
+AM_CPPFLAGS = -I@srcdir@ -I@srcdir@/../login -I@builddir@/../login -I@builddir@/..
 AM_CFLAGS = @CFLAGS@ @EXTRA_CFLAGS@
 
 lib_LTLIBRARIES = sasl-cram-md5.la

@@ -24,9 +24,9 @@ dnl Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 dnl 
 dnl #########################################################################
 
-AC_INIT(smtp-api.c)
-AM_CONFIG_HEADER(config.h)
-AM_INIT_AUTOMAKE([libesmtp],[1.0.6])
+AC_INIT([libesmtp], [1.3.0])
+AC_CONFIG_SRCDIR([smtp-api.c])
+AM_INIT_AUTOMAKE
 AC_CANONICAL_HOST
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -35,7 +35,7 @@ dnl Library versioning
 dnl #########################################################################
 
 LIB_CURRENT=7
-LIB_REVISION=6
+LIB_REVISION=7
 LIB_AGE=1
 AC_SUBST(LIB_CURRENT)
 AC_SUBST(LIB_REVISION)
@@ -303,7 +303,7 @@ if test x$with_openssl != xno ; then
 	)
 fi
 if test x$with_openssl != xno ; then
-	AC_CHECK_LIB(ssl, SSL_library_init, [
+	AC_CHECK_LIB(ssl, SSL_new, [
 				with_openssl=yes
 				LIBS="-lssl -lcrypto $LIBS"
 		     ], [
